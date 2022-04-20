@@ -10,13 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     var isLightOn = false
+    override var prefersStatusBarHidden: Bool{
+        return true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
 
     }
-    
     fileprivate func updateUI() {
  /*       if isLightOn{
             view.backgroundColor = .blue
@@ -25,11 +27,9 @@ class ViewController: UIViewController {
         }*/
         view.backgroundColor = isLightOn ? .blue : .cyan
     }
-    
     @IBAction func buttonPressed() {
         isLightOn.toggle()
         updateUI()
-        
     }
     
 }
