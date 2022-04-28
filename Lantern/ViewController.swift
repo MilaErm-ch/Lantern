@@ -17,17 +17,17 @@ class ViewController: UIViewController {
         updateUI()
     }
     fileprivate func updateUI() {
- /*       if isLightOn{
-            view.backgroundColor = .blue
-        } else {
-            view.backgroundColor = .white
-        }*/
-        view.backgroundColor = isLightOn ? .blue : .cyan
+ 
+        view.backgroundColor = isLightOn ? .orange : .green
     }
-    @IBAction func buttonPressed() {
+    // MARK: - Methods
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
         isLightOn.toggle()
         updateUI()
     }
+ 
+    }
     
-}
+
 
